@@ -1,16 +1,14 @@
 export default {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  darkMode: 'class',
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
       colors: {
-        premiumStart: "#ff00ff",
-        premiumEnd: "#00f7ff",
-        midStart: "#00c6ff",
-        midEnd: "#0072ff",
-        modStart: "#aaa",
-        modEnd: "#eee",
-      },
-    },
+        premiumGlow: '#00f5ff',
+        midGlow: '#8a2be2',
+        moderateGlow: '#39ff14'
+      }
+    }
   },
-  plugins: [],
+  plugins: []
 };

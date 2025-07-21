@@ -5,14 +5,59 @@
 html, body {
   height: 100%;
   margin: 0;
-  background: #000;
-  color: #fff;
   font-family: 'Inter', sans-serif;
+  transition: background 0.3s ease;
 }
 
+body.dark {
+  background-color: #000;
+}
+
+body.light {
+  background-color: #f6f8fa;
+}
+
+/* Glass effect with reflection shimmer */
+.glass {
+  position: relative;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(30px);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+  transition: background 0.5s ease, backdrop-filter 0.5s ease;
+}
+
+body.light .glass {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(20px);
+}
+
+.glass::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(120deg, rgba(255,255,255,0.2), rgba(255,255,255,0));
+  transform: rotate(25deg);
+  animation: shimmer 6s infinite linear, glassPulse 4s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0% { transform: translate(-100%, -100%) rotate(25deg); }
+  100% { transform: translate(100%, 100%) rotate(25deg); }
+}
+
+@keyframes glassPulse {
+  0%, 100% { opacity: 0.15; }
+  50% { opacity: 0.3; }
+}
+
+/* Neon Border Animations */
 .border-animate {
   position: relative;
-  z-index: 1;
 }
 
 .border-animate::before {
@@ -20,16 +65,28 @@ html, body {
   position: absolute;
   inset: 0;
   padding: 3px;
-  border-radius: 1rem;
-  background: linear-gradient(45deg, #ff00ff, #00f7ff, #ff00ff);
+  border-radius: inherit;
   background-size: 300% 300%;
-  animation: neonBorder 5s linear infinite;
+  animation: neonBorder 6s linear infinite;
   z-index: -1;
-  -webkit-mask:
-    linear-gradient(#fff 0 0) content-box,
-    linear-gradient(#fff 0 0);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
           mask-composite: exclude;
+}
+
+.border-premium::before {
+  background: linear-gradient(90deg, #00f5ff, #00d4ff, #00f5ff);
+  animation-duration: 4s;
+}
+
+.border-mid::before {
+  background: linear-gradient(90deg, #7a00ff, #b400ff, #7a00ff);
+  animation-duration: 6s;
+}
+
+.border-moderate::before {
+  background: linear-gradient(90deg, #39ff14, #32cd32, #39ff14);
+  animation-duration: 10s;
 }
 
 @keyframes neonBorder {
