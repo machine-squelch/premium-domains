@@ -10,7 +10,6 @@ html, body {
   font-family: 'Inter', sans-serif;
 }
 
-/* Neon Gradient Border Animation */
 .border-animate {
   position: relative;
   z-index: 1;
