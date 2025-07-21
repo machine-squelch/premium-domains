@@ -6,33 +6,43 @@ html, body {
   height: 100%;
   margin: 0;
   font-family: 'Inter', sans-serif;
-  transition: background 0.3s ease;
+  transition: background 0.6s ease;
 }
 
+/* Light/Dark Backgrounds */
 body.dark {
-  background-color: #000;
+  background-color: #000; /* OLED black */
 }
 
 body.light {
-  background-color: #f6f8fa;
+  background: linear-gradient(135deg, #f8f9fb, #eef1f6, #f6f7fb);
+  background-size: 400% 400%;
+  animation: bgShift 12s ease infinite;
 }
 
-/* Glass effect with reflection shimmer */
+@keyframes bgShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Glass Cards */
 .glass {
   position: relative;
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(30px);
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(35px);
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
-  transition: background 0.5s ease, backdrop-filter 0.5s ease;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  transition: background 0.5s ease, backdrop-filter 0.5s ease, opacity 0.5s ease;
 }
 
 body.light .glass {
-  background: rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.55);
+  box-shadow: 0 6px 30px rgba(180, 180, 180, 0.4);
 }
 
+/* Reflection Shimmer */
 .glass::after {
   content: '';
   position: absolute;
@@ -40,9 +50,10 @@ body.light .glass {
   left: -50%;
   width: 200%;
   height: 200%;
-  background: linear-gradient(120deg, rgba(255,255,255,0.2), rgba(255,255,255,0));
+  background: linear-gradient(120deg, rgba(255,255,255,0.35), rgba(255,255,255,0));
   transform: rotate(25deg);
   animation: shimmer 6s infinite linear, glassPulse 4s ease-in-out infinite;
+  opacity: 0.3;
 }
 
 @keyframes shimmer {
@@ -74,18 +85,19 @@ body.light .glass {
           mask-composite: exclude;
 }
 
+/* NEW Vibrant Neon Colors */
 .border-premium::before {
-  background: linear-gradient(90deg, #00f5ff, #00d4ff, #00f5ff);
+  background: linear-gradient(90deg, #00f5ff, #00e0ff, #00f5ff);
   animation-duration: 4s;
 }
 
 .border-mid::before {
-  background: linear-gradient(90deg, #7a00ff, #b400ff, #7a00ff);
+  background: linear-gradient(90deg, #6f00ff, #9400ff, #6f00ff);
   animation-duration: 6s;
 }
 
 .border-moderate::before {
-  background: linear-gradient(90deg, #39ff14, #32cd32, #39ff14);
+  background: linear-gradient(90deg, #ccff00, #bfff00, #ccff00);
   animation-duration: 10s;
 }
 

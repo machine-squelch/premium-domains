@@ -5,7 +5,7 @@ import { fileURLToPath } from 'url';
 const __dirname = fileURLToPath(new URL('.', import.meta.url));
 const app = express();
 
-app.use(express.static(join(__dirname, 'dist')));
+app.use(express.static(join(__dirname, 'dist'), { maxAge: '1y' }));
 
 app.get('*', (_, res) => {
   res.sendFile(join(__dirname, 'dist', 'index.html'));

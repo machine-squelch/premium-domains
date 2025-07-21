@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import Galaxy from "./components/Galaxy";
 
-// Domain data grouped by category
 const domains = {
   premium: [
     { name: "starparty.ai", price: "$6K – $15K" },
@@ -32,7 +31,6 @@ const domains = {
   ]
 };
 
-// GlassCard component
 function GlassCard({ name, price, category }: { name: string; price: string; category: string }) {
   const borderClass =
     category === "premium" ? "border-premium" :
@@ -41,7 +39,7 @@ function GlassCard({ name, price, category }: { name: string; price: string; cat
   const btnGradient =
     category === "premium" ? "from-cyan-400 to-blue-500" :
     category === "mid" ? "from-purple-500 to-indigo-600" :
-    "from-green-400 to-lime-500";
+    "from-lime-400 to-green-500";
 
   return (
     <div className={`glass border-animate ${borderClass} p-6 text-center hover:scale-105 transition`}>
@@ -57,18 +55,17 @@ function GlassCard({ name, price, category }: { name: string; price: string; cat
   );
 }
 
-// Theme Toggle (Apple-style)
 function ThemeToggle({ theme, toggleTheme }: { theme: string; toggleTheme: () => void }) {
   return (
     <div className="fixed top-6 right-6 z-50">
       <button
         onClick={toggleTheme}
-        className="glass flex items-center justify-center w-14 h-14 rounded-full shadow-lg"
+        className="glass flex items-center justify-center w-14 h-14 rounded-full shadow-lg transition-all"
       >
         {theme === "dark" ? (
           <span className="text-yellow-300 text-2xl">☀️</span>
         ) : (
-          <span className="text-blue-400 text-2xl">🌙</span>
+          <span className="text-blue-500 text-2xl">🌙</span>
         )}
       </button>
     </div>
@@ -116,7 +113,7 @@ export default function App() {
 
         {/* Moderate */}
         <section className="mt-16">
-          <h2 className="text-3xl font-bold mb-6 text-green-400">Other Opportunities</h2>
+          <h2 className="text-3xl font-bold mb-6 text-lime-400">Other Opportunities</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {domains.moderate.map((d) => (
               <GlassCard key={d.name} name={d.name} price={d.price} category="moderate" />
