@@ -3,31 +3,30 @@ import Galaxy from "./components/Galaxy";
 
 const domains = {
   premium: [
-    { name: "starparty.ai", price: "$6K – $15K" },
-    { name: "wordcoin.ai", price: "$5K – $12K" },
-    { name: "yieldpunk.com", price: "$4K – $10K" },
-    { name: "wallgraphics.art", price: "$1K – $3K" },
-    { name: "skullform.com", price: "$1.5K – $5K" }
+    { name: "starparty.ai", price: "$15K" },
+    { name: "wordcoin.ai", price: "$12K" },
+    { name: "pre-prompt.com", price: "$10K" }
+    { name: "yieldpunk.com", price: "$10K" },
+    { name: "localbrandpro.com", price: "$10K" },
+    { name: "wallgraphics.art", price: "$13K" },
+    { name: "skullform.com", price: "$5K" }
   ],
   mid: [
-    { name: "thinkazoo.com", price: "$1K – $4K" },
-    { name: "fridayify.com", price: "$1K – $3K" },
-    { name: "fridayified.com", price: "$1K – $3K" },
-    { name: "protonfield.com", price: "$800 – $2.5K" },
-    { name: "honorism.com", price: "$700 – $2K" },
-    { name: "jaxencoin.com", price: "$700 – $2K" }
+    { name: "thinkazoo.com", price: "$4K" },
+    { name: "fridayify.com", price: "$3K" },
+    { name: "fridayified.com", price: "$3K" },
+    { name: "protonfield.com", price: "$2.5K" },
+    { name: "honorism.com", price: "$2K" },
+    { name: "jaxencoin.com", price: "$2K" }
   ],
   moderate: [
-    { name: "agent-army.com", price: "$200 – $500" },
-    { name: "spragent.com", price: "$200 – $500" },
-    { name: "spongeagent.com", price: "$200 – $500" },
-    { name: "operator512.com", price: "$200 – $500" },
-    { name: "gearaz.com", price: "$200 – $500" },
-    { name: "localbrandpro.com", price: "$200 – $500" },
-    { name: "peopleorchestra.com", price: "$200 – $500" },
-    { name: "otter-mate.com", price: "$200 – $500" },
-    { name: "promptomato.com", price: "$200 – $500" },
-    { name: "pre-prompt.com", price: "$200 – $500" }
+    { name: "agent-army.com", price: "$5K" },
+    { name: "spragent.com", price: "$500" },
+    { name: "spongeagent.com", price: "$500" },
+    { name: "gearaz.com", price: "$500" },
+    { name: "peopleorchestra.com", price: "$3K" },
+    { name: "otter-mate.com", price: "$2K" },
+    { name: "promptomato.com", price: "$2K" },
   ]
 };
 
