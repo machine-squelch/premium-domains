@@ -121,7 +121,7 @@ export default function App() {
             ))}
           </div>
         </section>
-      </div>
+     <h2 className="text-3xl font-bold mb-6 text-cyan-400">COPYRUGHT 2025 - THINKAZOO - ALL RIGHTS RESERVED</h2>
     </div>
   );
 }
