@@ -3,11 +3,11 @@ import Galaxy from "./components/Galaxy";
 
 const domains = {
   premium: [
-    { name: "starparty.ai", price: "$6K – $15K" },
-    { name: "wordcoin.ai", price: "$5K – $12K" },
-    { name: "yieldpunk.com", price: "$4K – $10K" },
-    { name: "wallgraphics.art", price: "$1K – $3K" },
-    { name: "skullform.com", price: "$1.5K – $5K" }
+    { name: "starparty.ai", price: "$15K" },
+    { name: "wordcoin.ai", price: "$12K" },
+    { name: "yieldpunk.com", price: "$10K" },
+    { name: "wallgraphics.art", price: "$3K" },
+    { name: "skullform.com", price: "$5K" }
   ],
   mid: [
     { name: "thinkazoo.com", price: "$1K – $4K" },
@@ -88,7 +88,7 @@ export default function App() {
 
       <div className="relative z-10 container mx-auto px-6 py-16">
         <h1 className="text-5xl font-extrabold mb-12 text-center bg-gradient-to-r from-cyan-400 to-blue-500 text-transparent bg-clip-text">
-          Premium Domains Marketplace
+          DOPE DOMAINS
         </h1>
 
         {/* Premium */}
